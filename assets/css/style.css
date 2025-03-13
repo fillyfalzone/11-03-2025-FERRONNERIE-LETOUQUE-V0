@@ -50,7 +50,11 @@ li {
     /* Rouge foncé pour un effet artisanal */
 }
 
-
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
 /*---- Header start ----*/
 
 .call-burger {
@@ -345,6 +349,9 @@ li {
     color: var(--black);
     margin-bottom: 20px;
 }
+.section-title.white {
+    color: var(--white);
+}
 
 .span-title {
     color: var(--red);
@@ -357,7 +364,8 @@ li {
     margin: 0 auto;
     display: flex;
     gap: 50px;
-    align-items: stretch; /* Force les éléments à prendre la hauteur complète */
+    align-items: stretch;
+    /* Force les éléments à prendre la hauteur complète */
     padding: 0 50px;
 }
 
@@ -372,7 +380,8 @@ li {
     background-image: url('https://picsum.photos/900/900?random=1');
     background-size: cover;
     background-position: center;
-    display: block; /* Assurer l'affichage */
+    display: block;
+    /* Assurer l'affichage */
     position: relative;
     min-height: 400px;
 }
@@ -398,6 +407,7 @@ li {
     color: var(--white);
     font-family: 'Oswald', sans-serif;
 }
+
 .float-text {
     color: var(--white);
     font-family: 'Lora', serif;
@@ -406,6 +416,7 @@ li {
 .text-container p {
     margin-bottom: 20px;
 }
+
 @media screen and (max-width: 1000px) {
     .wrapper {
         flex-direction: column;
@@ -434,7 +445,91 @@ li {
 }
 
 
-/*---- Gallery2  ----*/ 
+/*---- Gallery2  ----*/
+#gallery {
+    background-color: var(--black);
+    color: var(--white);
+    padding: 50px 0;
+}
+/* Structure responsive avec CSS Grid */
+.gallery2-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    width: 100%;
+}
+
+@media (max-width: 900px) {
+    .gallery2-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .gallery2-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Style des items */
+.gallery2-item {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gallery2-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Texte en bas de l'image */
+.gallery2-text {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--white);
+    font-size: 1rem;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.gallery2-item:hover .gallery2-text {
+    opacity: 0;
+}
 
 
 
+.galllery2-overlay h3 {
+    color: var(--white);
+    font-size: 1.2rem;
+}
+
+.galllery2-overlay p {
+    color: var(--white);
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+.galllery2-overlay {
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    padding: 5px;
+    background-color: rgba(255, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    opacity: 0;
+    clip-path: circle(0% at 50% 50%);
+    transition: opacity 0.3s ease-in-out, clip-path 0.4s ease-in-out;
+}
+
+.gallery2-item:hover .galllery2-overlay {
+    opacity: 1;
+    clip-path: circle(75% at 50% 50%);
+}

@@ -5,13 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ferronnerie LETOUQUE</title>
+
+    <!--=============== SWIPER CSS ===============-->
+    <link rel="stylesheet" href="assets/swiper/css/swiper-bundle.min.css">
     <!-- CDN fontawesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--=============== REMIXICONS ===============-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css" crossorigin="">
     <!-- CDN Google Font -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
-    <!-- CSS -->
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/swiper/css/styles.css">
     <link rel="stylesheet" href="assets/css/carrousel.css">
     <link rel="stylesheet" href="assets/css/style2.css">
     <link rel="stylesheet" href="assets/css/style.css">
@@ -23,9 +29,10 @@
         <!-- Navbar start -->
         <nav class="navbar" id="navbar">
             <a href="index.html" class="logo-container">
-                <img class="logo" src="assets/images/logo/ferronnerie-letouque-maitre-artisan.svg" alt="Logo de la ferronnerie LETOUQUE">
+                <img class="logo" src="assets/images/logo/ferronnerie-letouque-maitre-artisan.svg"
+                    alt="Logo de la ferronnerie LETOUQUE">
             </a>
-    
+
             <ul class="nav-list" id="nav-list">
                 <li class="nav-item"><a href="index.html">Accueil</a></li>
                 <li class="nav-item"><a href="realisations.html">Nos réalisations</a></li>
@@ -46,7 +53,7 @@
                     </ul>
                 </li>
             </ul>
-    
+
             <!-- Social Media (restera ici mais sera déplacé avec JavaScript en mobile) -->
             <div class="social-media" id="social-media">
                 <a href="https://www.facebook.com/ferronneriedartserrurerieletouque"><i class="fab fa-facebook"></i></a>
@@ -62,7 +69,7 @@
         <!-- Navbar end -->
 
         <!-- Hero start -->
-        <section id="hero" class="hero">            
+        <section id="hero" class="hero">
             <!-- Video immersive -->
             <video class="hero-video hero-video-wrapper" autoplay loop muted playsinline>
                 <source src="assets/video/videoplayback.webm" type="video/mp4">
@@ -80,8 +87,8 @@
                     <span>xxxxxxxxx</span>
                 </div>
             </div>
-        </section>    
-        <!-- Hero end -->    
+        </section>
+        <!-- Hero end -->
     </header>
     <!-- Header end -->
 
@@ -95,9 +102,15 @@
             </div>
             <div class="wrapper">
                 <div class="text-container">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, tempore. Minima harum laudantium voluptatum? Reprehenderit eveniet porro velit veritatis quas eaque laudantium excepturi veniam, voluptatum magnam reiciendis dolorum labore odit.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, tempore. Minima harum laudantium voluptatum? Reprehenderit eveniet porro velit veritatis quas eaque laudantium excepturi veniam, voluptatum magnam reiciendis dolorum labore odit.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, tempore. Minima harum laudantium voluptatum? Reprehenderit eveniet porro velit veritatis quas eaque laudantium excepturi veniam, voluptatum magnam reiciendis dolorum labore odit.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, tempore. Minima harum
+                        laudantium voluptatum? Reprehenderit eveniet porro velit veritatis quas eaque laudantium
+                        excepturi veniam, voluptatum magnam reiciendis dolorum labore odit.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, tempore. Minima harum
+                        laudantium voluptatum? Reprehenderit eveniet porro velit veritatis quas eaque laudantium
+                        excepturi veniam, voluptatum magnam reiciendis dolorum labore odit.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, tempore. Minima harum
+                        laudantium voluptatum? Reprehenderit eveniet porro velit veritatis quas eaque laudantium
+                        excepturi veniam, voluptatum magnam reiciendis dolorum labore odit.</p>
                 </div>
                 <div class="image-container">
                     <div class="float">
@@ -116,59 +129,75 @@
                 <h2 class="section-title">Réalisations Ferronnerie LETOUQUE</h2>
             </div>
 
-            <div class="carousel">
-                <ul class="carousel__list">
-                    <li class="carousel__item" data-pos="-2">
-                        <div class="profile-card">
-                            <div class="image-carrousel" style="background-image: url('https://picsum.photos/400/600?random=1');">
+            <div class="card__container swiper">
+                <div class="card__content">
+                    <div class="swiper-wrapper">
+                        <article class="card__article swiper-slide">
+                            <div class="card__image">
+                                <img src="https://picsum.photos/300/400?random=1" alt="image" class="card__img">
                             </div>
-                            <div class="info">
-                                <h3><a href="#">Garde-corps en fer forgé</a></h3>
-                                <p>Une conception élégante et robuste, réalisée sur mesure pour embellir votre espace.</p>
+                            <div class="card__data">
+                                <h3 class="card__name">Lorem ipsum dolor sit.</h3>
+                                <p class="card__description">
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus, delectus.
+                                </p>
                             </div>
-                        </div>
-                    </li>
-                    <li class="carousel__item" data-pos="-1">
-                        <div class="profile-card">
-                            <div class="image-carrousel" style="background-image: url('https://picsum.photos/400/600?random=2');">
+                        </article>
+                        <article class="card__article swiper-slide">
+                            <div class="card__image">
+                                <img src="https://picsum.photos/300/400?random=2" alt="image" class="card__img">
                             </div>
-                            <div class="info">
-                                <h3><a href="#">Garde-corps en fer forgé</a></h3>
-                                <p>Une conception élégante et robuste, réalisée sur mesure pour embellir votre espace.</p>
+                            <div class="card__data">
+                                <h3 class="card__name">Lorem ipsum dolor sit.</h3>
+                                <p class="card__description">
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus, delectus.
+                                </p>
                             </div>
-                        </div>
-                    </li>
-                    <li class="carousel__item" data-pos="0">
-                        <div class="profile-card">
-                            <div class="image-carrousel" style="background-image: url('https://picsum.photos/400/600?random=3');">
+                        </article>
+                        <article class="card__article swiper-slide">
+                            <div class="card__image">
+                                <img src="https://picsum.photos/300/400?random=3" alt="image" class="card__img">
                             </div>
-                            <div class="info">
-                                <h3><a href="#">Garde-corps en fer forgé</a></h3>
-                                <p>Une conception élégante et robuste, réalisée sur mesure pour embellir votre espace.</p>
+                            <div class="card__data">
+                                <h3 class="card__name">Lorem ipsum dolor sit.</h3>
+                                <p class="card__description">
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus, delectus.
+                                </p>
                             </div>
-                        </div>
-                    </li>
-                    <li class="carousel__item" data-pos="1">
-                        <div class="profile-card">
-                            <div class="image-carrousel" style="background-image: url('https://picsum.photos/400/600?random=4');">
+                        </article>
+                        <article class="card__article swiper-slide">
+                            <div class="card__image">
+                                <img src="https://picsum.photos/300/400?random=4" alt="image" class="card__img">
                             </div>
-                            <div class="info">
-                                <h3><a href="#">Garde-corps en fer forgé</a></h3>
-                                <p>Une conception élégante et robuste, réalisée sur mesure pour embellir votre espace.</p>
+                            <div class="card__data">
+                                <h3 class="card__name">Lorem ipsum dolor sit.</h3>
+                                <p class="card__description">
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus, delectus.
+                                </p>
                             </div>
-                        </div>
-                    </li>
-                    <li class="carousel__item" data-pos="2">
-                        <div class="profile-card">
-                            <div class="image-carrousel" style="background-image: url('https://picsum.photos/400/600?random=5');">
+                        </article>
+                        <article class="card__article swiper-slide">
+                            <div class="card__image">
+                                <img src="https://picsum.photos/300/400?random=5" alt="image" class="card__img">
                             </div>
-                            <div class="info">
-                                <h3><a href="#">Garde-corps en fer forgé</a></h3>
-                                <p>Une conception élégante et robuste, réalisée sur mesure pour embellir votre espace.</p>
+                            <div class="card__data">
+                                <h3 class="card__name">Lorem ipsum dolor sit.</h3>
+                                <p class="card__description">
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus, delectus.
+                                </p>
                             </div>
-                        </div>
-                    </li>
-                </ul>
+                        </article>
+                    </div>
+                </div>
+                <!-- navigation buttons -->
+                <div class="swiper-button-prev">
+                    <span class="ri-arrow-left-s-line"></span>
+                </div>
+                <div class="swiper-button-next">
+                    <span class="ri-arrow-right-s-line"></span>
+                </div>
+                <!--  pagination -->
+                <div class="swiper-pagination"></div>
             </div>
         </section>
         <!-- Realisation end -->
@@ -182,17 +211,21 @@
             <div class="gardeners-container">
                 <div class="gardeners-content">
                     <div class="gardeners-text">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta dolores iusto voluptatem delectus facilis placeat at neque fugiat temporibus beatae, iure rem commodi cum repellat facere distinctio ea provident est?</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta dolores iusto voluptatem delectus facilis placeat at neque fugiat temporibus beatae, iure rem commodi cum repellat facere distinctio ea provident est?</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta dolores iusto voluptatem delectus facilis placeat at neque fugiat temporibus beatae, iure rem commodi cum repellat facere distinctio ea provident est?</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta dolores iusto voluptatem
+                            delectus facilis placeat at neque fugiat temporibus beatae, iure rem commodi cum repellat
+                            facere distinctio ea provident est?</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta dolores iusto voluptatem
+                            delectus facilis placeat at neque fugiat temporibus beatae, iure rem commodi cum repellat
+                            facere distinctio ea provident est?</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta dolores iusto voluptatem
+                            delectus facilis placeat at neque fugiat temporibus beatae, iure rem commodi cum repellat
+                            facere distinctio ea provident est?</p>
                         <a href="jardinier-paysagiste-cannes.html" class="cta-button">Parlons de votre projet</a>
                     </div>
 
                     <div class="gardeners-images">
-                        <img src="https://picsum.photos/400/600?random=7"
-                            alt="Outils de jardinage" class="tools-image">
-                        <img src="https://picsum.photos/400/600?random=8"
-                            alt="Chemin de jardin" class="path-image">
+                        <img src="https://picsum.photos/400/600?random=7" alt="Outils de jardinage" class="tools-image">
+                        <img src="https://picsum.photos/400/600?random=8" alt="Chemin de jardin" class="path-image">
                     </div>
                 </div>
                 <div class="title-container">
@@ -201,62 +234,139 @@
                 </div>
                 <div class="gardeners-content">
                     <div class="gardeners-text">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta dolores iusto voluptatem delectus facilis placeat at neque fugiat temporibus beatae, iure rem commodi cum repellat facere distinctio ea provident est?</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta dolores iusto voluptatem delectus facilis placeat at neque fugiat temporibus beatae, iure rem commodi cum repellat facere distinctio ea provident est?</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta dolores iusto voluptatem delectus facilis placeat at neque fugiat temporibus beatae, iure rem commodi cum repellat facere distinctio ea provident est?</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta dolores iusto voluptatem
+                            delectus facilis placeat at neque fugiat temporibus beatae, iure rem commodi cum repellat
+                            facere distinctio ea provident est?</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta dolores iusto voluptatem
+                            delectus facilis placeat at neque fugiat temporibus beatae, iure rem commodi cum repellat
+                            facere distinctio ea provident est?</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta dolores iusto voluptatem
+                            delectus facilis placeat at neque fugiat temporibus beatae, iure rem commodi cum repellat
+                            facere distinctio ea provident est?</p>
                         <a href="jardinier-paysagiste-cannes.html" class="cta-button">Parlons de votre projet</a>
                     </div>
 
                     <div class="gardeners-images">
-                        <img src="https://picsum.photos/400/600?random=7"
-                            alt="Outils de jardinage" class="tools-image">
-                        <img src="https://picsum.photos/400/600?random=8"
-                            alt="Chemin de jardin" class="path-image">
+                        <img src="https://picsum.photos/400/600?random=7" alt="Outils de jardinage" class="tools-image">
+                        <img src="https://picsum.photos/400/600?random=8" alt="Chemin de jardin" class="path-image">
                     </div>
                 </div>
             </div>
-            
+
         </section>
         <!-- Prestation end -->
 
         <!-- Galery start -->
-        <section class="" id="prestation">
+        <section class="section" id="gallery">
             <div class="title-container">
                 <span class="span-title">Lorem ipsum dolor</span>
-                <h2 class="section-title">Galery Ferronnerie LETOUQUE</h2>
+                <h2 class="section-title white">Galery Ferronnerie LETOUQUE</h2>
+                </div>
+                <div class="flex-column">
+                <div>
+                    <div class="gallery-container">
+                        <div class="gallery-item">
+                            <img src="https://picsum.photos/400?random=1" alt="Paysages Secrets, jardinier paysagiste à Cannes">
+                            <div class="gallery-overlay">
+                                <h3>Entretien de jardin</h3>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="https://picsum.photos/400?random=2"
+                                alt="Paysages Secrets, jardinier paysagiste à Mandelieu">
+                            <div class="gallery-overlay">
+                                <h3>Aménagement paysager</h3>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="https://picsum.photos/400?random=3"
+                                alt="Paysages Secrets, jardinier paysagiste à Mougins">
+                            <div class="gallery-overlay">
+                                <h3>Création de jardin</h3>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="https://picsum.photos/400?random=4"
+                                alt="Paysages Secrets, jardinier paysagiste à Théoule">
+                            <div class="gallery-overlay">
+                                <h3>Taille et élagage</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-container">
+                        <div class="gallery-item">
+                            <img src="https://picsum.photos/400?random=5" alt="Paysages Secrets, jardinier paysagiste à Cannes">
+                            <div class="gallery-overlay">
+                                <h3>Entretien de jardin</h3>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="https://picsum.photos/400?random=6"
+                                alt="Paysages Secrets, jardinier paysagiste à Mandelieu">
+                            <div class="gallery-overlay">
+                                <h3>Aménagement paysager</h3>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="https://picsum.photos/400?random=7"
+                                alt="Paysages Secrets, jardinier paysagiste à Mougins">
+                            <div class="gallery-overlay">
+                                <h3>Création de jardin</h3>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="https://picsum.photos/400?random=8"
+                                alt="Paysages Secrets, jardinier paysagiste à Théoule">
+                            <div class="gallery-overlay">
+                                <h3>Taille et élagage</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery2-container">
+                    <div class="gallery2-item">
+                        <img class="gallery2-img" src="https://picsum.photos/400?random=9" alt="image">
+                        <div class="galllery2-overlay">
+                            <h3>Entretien de jardin</h3>
+                            <p>Lorem ipsum dolor sit amet Lorem ipsum dolor sit..</p>
+                        </div>
+                        <div class="gallery2-text">
+                            <h3>Entretien de jardin</h3>
+                        </div>
+                    </div>
+                    <div class="gallery2-item">
+                        <img class="gallery2-img" src="https://picsum.photos/400?random=10" alt="image">
+                        <div class="galllery2-overlay">
+                            <h3>Entretien de jardin</h3>
+                            <p>Lorem ipsum dolor sit amet Lorem ipsum dolor sit..</p>
+                        </div>
+                        <div class="gallery2-text">
+                            <h3>Entretien de jardin</h3>
+                        </div>
+                    </div>
+                    <div class="gallery2-item">
+                        <img class="gallery2-img" src="https://picsum.photos/400?random=11" alt="image">
+                        <div class="galllery2-overlay">
+                            <h3>Entretien de jardin</h3>
+                            <p>Lorem ipsum dolor sit amet Lorem ipsum dolor sit..</p>
+                        </div>
+                        <div class="gallery2-text">
+                            <h3>Entretien de jardin</h3>
+                        </div>
+                    </div>
+                    <div class="gallery2-item">
+                        <img class="gallery2-img" src="https://picsum.photos/400?random=12" alt="image">
+                        <div class="galllery2-overlay">
+                            <h3>Entretien de jardin</h3>
+                            <p>Lorem ipsum dolor sit amet Lorem ipsum dolor sit..</p>
+                        </div>
+                        <div class="gallery2-text">
+                            <h3>Entretien de jardin</h3>
+                        </div>
+                    </div>
+                </div>
             </div>
-    
-            <div class="gallery-container">
-                <div class="gallery-item">
-                    <img src="https://picsum.photos/400?random=1"
-                        alt="Paysages Secrets, jardinier paysagiste à Cannes">
-                    <div class="gallery-overlay">
-                        <h3>Entretien de jardin</h3>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="https://picsum.photos/400?random=2"
-                        alt="Paysages Secrets, jardinier paysagiste à Mandelieu">
-                    <div class="gallery-overlay">
-                        <h3>Aménagement paysager</h3>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="https://picsum.photos/400?random=3"
-                        alt="Paysages Secrets, jardinier paysagiste à Mougins">
-                    <div class="gallery-overlay">
-                        <h3>Création de jardin</h3>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="https://picsum.photos/400?random=4"
-                        alt="Paysages Secrets, jardinier paysagiste à Théoule">
-                    <div class="gallery-overlay">
-                        <h3>Taille et élagage</h3>
-                    </div>
-                </div>
-            </div>
-           
+
         </section>
         <!-- Galery end -->
     </main>
@@ -320,6 +430,11 @@
     <!-- Footer end -->
 
     <!-- script -->
+    <!--=============== SWIPER JS ===============-->
+    <script src="assets/swiper/js/swiper-bundle.min.js"></script>
+
+    <!--=============== JS ===============-->
+    <script src="assets/swiper/js/main.js"></script>
     <script src="assets/js/carrousel.js"></script>
     <script src="assets/js/script.js"></script>
 </body>
