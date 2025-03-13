@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider de Profils</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: Arial, sans-serif; }
+        .carousel-container {
+            position: relative;
+            width: 90%;
+            max-width: 1000px;
+            margin: auto;
+            overflow: hidden;
+        }
+        .carousel {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        .profile-card {
+            min-width: 300px;
+            margin: 10px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        .profile-card:hover { transform: scale(1.05); }
+        .image-container {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+        }
+        .info {
+            background: black;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        .carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0,0,0,0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 20px;
+            border-radius: 50%;
+        }
+        .prev { left: 10px; }
+        .next { right: 10px; }
+        @media (max-width: 999px) {
+            .carousel-container { width: 95%; }
+        }
+    </style>
+</head>
+<body>
+    <div class="carousel-container">
+        <button class="carousel-btn prev">&#10094;</button>
+        <div class="carousel">
+            <div class="profile-card">
+                <div class="image-container" style="background-image: url('https://picsum.photos/300/200?random=1');"></div>
+                <div class="info"><h3>Projet 1</h3><p>Description courte.</p></div>
+            </div>
+            <div class="profile-card">
+                <div class="image-container" style="background-image: url('https://picsum.photos/300/200?random=2');"></div>
+                <div class="info"><h3>Projet 2</h3><p>Description courte.</p></div>
+            </div>
+            <div class="profile-card">
+                <div class="image-container" style="background-image: url('https://picsum.photos/300/200?random=3');"></div>
+                <div class="info"><h3>Projet 3</h3><p>Description courte.</p></div>
+            </div>
+        </div>
+        <button class="carousel-btn next">&#10095;</button>
+    </div>
+    <script>
+        const carousel = document.querySelector('.carousel');
+        const prevBtn = document.querySelector('.prev');
+        const nextBtn = document.querySelector('.next');
+        let index = 0;
+        const totalItems = document.querySelectorAll('.profile-card').length;
+        const visibleCards = window.innerWidth >= 1000 ? 3 : window.innerWidth >= 768 ? 2 : 1;
+        let interval;
+        
+        function updateCarousel() {
+            carousel.style.transform = `translateX(-${index * (300 + 20)}px)`;
+        }
+        
+        function nextSlide() {
+            index = (index + 1) % totalItems;
+            updateCarousel();
+        }
+        
+        function prevSlide() {
+            index = (index - 1 + totalItems) % totalItems;
+            updateCarousel();
+        }
+        
+        function startAutoSlide() {
+            interval = setInterval(nextSlide, 3000);
+        }
+        
+        function stopAutoSlide() {
+            clearInterval(interval);
+        }
+        
+        nextBtn.addEventListener('click', nextSlide);
+        prevBtn.addEventListener('click', prevSlide);
+        
+        document.querySelector('.carousel-container').addEventListener('mouseenter', stopAutoSlide);
+        document.querySelector('.carousel-container').addEventListener('mouseleave', startAutoSlide);
+        
+        startAutoSlide();
+    </script>
+</body>
+</html>

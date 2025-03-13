@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ferronnerie LETOUQUE</title>
+    <!-- CDN fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- CDN Google Font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/carrousel.css">
+    <link rel="stylesheet" href="assets/css/style2.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <!-- Header start -->
+    <header>
+        <!-- Navbar start -->
+        <nav class="navbar" id="navbar">
+            <a href="index.html" class="logo-container">
+                <img class="logo" src="assets/images/logo/ferronnerie-letouque-maitre-artisan.svg" alt="Logo de la ferronnerie LETOUQUE">
+            </a>
+    
+            <ul class="nav-list" id="nav-list">
+                <li class="nav-item"><a href="index.html">Accueil</a></li>
+                <li class="nav-item"><a href="realisations.html">Nos réalisations</a></li>
+                <li class="nav-item"><a href="contact.html">Contact</a></li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="dropdown-toggle">Services</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="ferronnerie.html">Ferronnerie d’art</a></li>
+                        <li><a href="garde-corps.html">Garde-corps</a></li>
+                        <li><a href="portails.html">Portails et Clôtures</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="dropdown-toggle">À propos</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="histoire.html">Notre histoire</a></li>
+                        <li><a href="artisans.html">Nos artisans</a></li>
+                    </ul>
+                </li>
+            </ul>
+    
+            <!-- Social Media (restera ici mais sera déplacé avec JavaScript en mobile) -->
+            <div class="social-media" id="social-media">
+                <a href="https://www.facebook.com/ferronneriedartserrurerieletouque"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/ferronnerieletouque06310/"><i class="fab fa-instagram"></i></a>
+            </div>
+            <div id="call-burger" class="call-burger">
+                <!-- Call button -->
+                <a href="tel:+336 63 63 63 63" class="call-btn fas fa-phone"></a>
+                <!-- Burger -->
+                <button id="burger" class="burger fas fa-bars"></button>
+            </div>
+        </nav>
+        <!-- Navbar end -->
+
+        <!-- Hero start -->
+        <section id="hero" class="hero">            
+            <!-- Video immersive -->
+            <video class="hero-video hero-video-wrapper" autoplay loop muted playsinline>
+                <source src="assets/video/videoplayback.webm" type="video/mp4">
+                Votre navigateur ne prend pas en charge la balise vidéo.
+            </video>
+            <!-- Main title -->
+            <div class="hero-content">
+                <h1 class="main-title">Ferronnerie LETOUQUE</h1> <!-- Titre masqué pour l'accessibilité -->
+                <!-- Breakcrumb -->
+                <div class="breadcrumb">
+                    <a class="breakcrumb-item" href="index.html">Accueil</a>
+                    <span>></span>
+                    <a class="breakcrumb-item" href="realisations.html">Nos réalisations</a>
+                    <span>></span>
+                    <span>xxxxxxxxx</span>
+                </div>
+            </div>
+        </section>    
+        <!-- Hero end -->    
+    </header>
+    <!-- Header end -->
+
+    <!-- Main start -->
+    <main>
+        <!-- Presentation start -->
+        <section id="presentation" class="section">
+            <div class="title-container">
+                <span class="span-title">Lorem ipsum dolor</span>
+                <h2 class="section-title">Présentation Ferronnerie LETOUQUE</h2>
+            </div>
+            <div class="wrapper">
+                <div class="text-container">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, tempore. Minima harum laudantium voluptatum? Reprehenderit eveniet porro velit veritatis quas eaque laudantium excepturi veniam, voluptatum magnam reiciendis dolorum labore odit.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, tempore. Minima harum laudantium voluptatum? Reprehenderit eveniet porro velit veritatis quas eaque laudantium excepturi veniam, voluptatum magnam reiciendis dolorum labore odit.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, tempore. Minima harum laudantium voluptatum? Reprehenderit eveniet porro velit veritatis quas eaque laudantium excepturi veniam, voluptatum magnam reiciendis dolorum labore odit.</p>
+                </div>
+                <div class="image-container">
+                    <div class="float">
+                        <div class="float-title">20 ans</div>
+                        <div class="float-text">d'expériences</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Presentation end -->
+
+        <!-- Realisation start -->
+        <section class="section" id="realisation">
+            <div class="title-container">
+                <span class="span-title">Lorem ipsum dolor</span>
+                <h2 class="section-title">Réalisations Ferronnerie LETOUQUE</h2>
+            </div>
+
+            <div class="carousel">
+                <ul class="carousel__list">
+                    <li class="carousel__item" data-pos="-2">
+                        <div class="profile-card">
+                            <div class="image-carrousel" style="background-image: url('https://picsum.photos/400/600?random=1');">
+                            </div>
+                            <div class="info">
+                                <h3><a href="#">Garde-corps en fer forgé</a></h3>
+                                <p>Une conception élégante et robuste, réalisée sur mesure pour embellir votre espace.</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="carousel__item" data-pos="-1">
+                        <div class="profile-card">
+                            <div class="image-carrousel" style="background-image: url('https://picsum.photos/400/600?random=2');">
+                            </div>
+                            <div class="info">
+                                <h3><a href="#">Garde-corps en fer forgé</a></h3>
+                                <p>Une conception élégante et robuste, réalisée sur mesure pour embellir votre espace.</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="carousel__item" data-pos="0">
+                        <div class="profile-card">
+                            <div class="image-carrousel" style="background-image: url('https://picsum.photos/400/600?random=3');">
+                            </div>
+                            <div class="info">
+                                <h3><a href="#">Garde-corps en fer forgé</a></h3>
+                                <p>Une conception élégante et robuste, réalisée sur mesure pour embellir votre espace.</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="carousel__item" data-pos="1">
+                        <div class="profile-card">
+                            <div class="image-carrousel" style="background-image: url('https://picsum.photos/400/600?random=4');">
+                            </div>
+                            <div class="info">
+                                <h3><a href="#">Garde-corps en fer forgé</a></h3>
+                                <p>Une conception élégante et robuste, réalisée sur mesure pour embellir votre espace.</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="carousel__item" data-pos="2">
+                        <div class="profile-card">
+                            <div class="image-carrousel" style="background-image: url('https://picsum.photos/400/600?random=5');">
+                            </div>
+                            <div class="info">
+                                <h3><a href="#">Garde-corps en fer forgé</a></h3>
+                                <p>Une conception élégante et robuste, réalisée sur mesure pour embellir votre espace.</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- Realisation end -->
+
+        <!-- Prestatiion start -->
+        <section class="section" id="prestation">
+            <div class="title-container">
+                <span class="span-title">Lorem ipsum dolor</span>
+                <h2 class="section-title">Prestations Ferronnerie LETOUQUE</h2>
+            </div>
+            <div class="gardeners-container">
+                <div class="gardeners-content">
+                    <div class="gardeners-text">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta dolores iusto voluptatem delectus facilis placeat at neque fugiat temporibus beatae, iure rem commodi cum repellat facere distinctio ea provident est?</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta dolores iusto voluptatem delectus facilis placeat at neque fugiat temporibus beatae, iure rem commodi cum repellat facere distinctio ea provident est?</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta dolores iusto voluptatem delectus facilis placeat at neque fugiat temporibus beatae, iure rem commodi cum repellat facere distinctio ea provident est?</p>
+                        <a href="jardinier-paysagiste-cannes.html" class="cta-button">Parlons de votre projet</a>
+                    </div>
+
+                    <div class="gardeners-images">
+                        <img src="https://picsum.photos/400/600?random=7"
+                            alt="Outils de jardinage" class="tools-image">
+                        <img src="https://picsum.photos/400/600?random=8"
+                            alt="Chemin de jardin" class="path-image">
+                    </div>
+                </div>
+                <div class="title-container">
+                    <span class="span-title">Lorem ipsum dolor</span>
+                    <h2 class="section-title">Prestations Ferronnerie LETOUQUE</h2>
+                </div>
+                <div class="gardeners-content">
+                    <div class="gardeners-text">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta dolores iusto voluptatem delectus facilis placeat at neque fugiat temporibus beatae, iure rem commodi cum repellat facere distinctio ea provident est?</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta dolores iusto voluptatem delectus facilis placeat at neque fugiat temporibus beatae, iure rem commodi cum repellat facere distinctio ea provident est?</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta dolores iusto voluptatem delectus facilis placeat at neque fugiat temporibus beatae, iure rem commodi cum repellat facere distinctio ea provident est?</p>
+                        <a href="jardinier-paysagiste-cannes.html" class="cta-button">Parlons de votre projet</a>
+                    </div>
+
+                    <div class="gardeners-images">
+                        <img src="https://picsum.photos/400/600?random=7"
+                            alt="Outils de jardinage" class="tools-image">
+                        <img src="https://picsum.photos/400/600?random=8"
+                            alt="Chemin de jardin" class="path-image">
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+        <!-- Prestation end -->
+
+        <!-- Galery start -->
+        <section class="" id="prestation">
+            <div class="title-container">
+                <span class="span-title">Lorem ipsum dolor</span>
+                <h2 class="section-title">Galery Ferronnerie LETOUQUE</h2>
+            </div>
+    
+            <div class="gallery-container">
+                <div class="gallery-item">
+                    <img src="https://picsum.photos/400?random=1"
+                        alt="Paysages Secrets, jardinier paysagiste à Cannes">
+                    <div class="gallery-overlay">
+                        <h3>Entretien de jardin</h3>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://picsum.photos/400?random=2"
+                        alt="Paysages Secrets, jardinier paysagiste à Mandelieu">
+                    <div class="gallery-overlay">
+                        <h3>Aménagement paysager</h3>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://picsum.photos/400?random=3"
+                        alt="Paysages Secrets, jardinier paysagiste à Mougins">
+                    <div class="gallery-overlay">
+                        <h3>Création de jardin</h3>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://picsum.photos/400?random=4"
+                        alt="Paysages Secrets, jardinier paysagiste à Théoule">
+                    <div class="gallery-overlay">
+                        <h3>Taille et élagage</h3>
+                    </div>
+                </div>
+            </div>
+           
+        </section>
+        <!-- Galery end -->
+    </main>
+    <!-- Main end -->
+
+    <!-- Footer start -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-sections">
+                <div class="footer-section">
+                    <h4>Prestations de Paysages Secrets</h4>
+                    <ul>
+                        <li><a href="creation-jardin.html">Création de jardin</a></li>
+                        <li><a href="entretien-jardin.html">Entretien de jardin</a></li>
+                        <li><a href="realisations-jardinier-paysagiste-cannes.html">Réalisations</a></li>
+                        <li><a href="actualites-jardinier-paysagiste-cannes.html">Actualités</a></li>
+                        <li><a href="jardinier-paysagiste-cannes.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Jardinier paysagiste à Cannes et alentours</h4>
+                    <div class="company-info">
+                        <p>L'entreprise de paysagisme et de jardinage Paysages Secrets intervient dans un rayon de 30 km
+                            autour de Cannes pour la création et l'entretien de jardin et d'espace vert, incluant les
+                            villes de Le Cannet, Vallauris, Mougins, Mandelieu-la-Napoule, La Roquette-sur-Siagne,
+                            Théoule-sur-Mer, Mouans-Sartoux, Pégomas, Antibes, Valbonne...</p>
+                        <div class="contact-info">
+                            <p><i class="fas fa-phone"></i> 06 73 47 24 44</p>
+                            <p><i class="fas fa-map-marker-alt"></i> Chemin Rue Antoine Laurent 06210
+                                Mandelieu-la-Napoule</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Paysages Secrets sur les réseaux sociaux</h4>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/people/Paysages-Secrets/100050438576407/"
+                            class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/paysages_secrets/" class="social-link"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="https://g.page/r/CRQi1e62bH1VEAE/review" class="social-link"><i
+                                class="fab fa-google"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <a href="https://agencelinx.fr" target="_blank">© Agence LINX Création site Internet et
+                        référencement</a>
+                </div>
+                <div class="footer-links">
+                    <a href="mentions-legales.html">Mentions légales</a>
+                </div>
+            </div>
+        </div>
+        <!-- Call button and scroll to top -->
+        <a href="tel:+09554563" class="btn-call"> <span class="fas fa-phone"></span></a>
+        <a href="#top" class="scroll-top"> <span class="fas fa-arrow-up"></span></a>
+    </footer>
+    <!-- Footer end -->
+
+    <!-- script -->
+    <script src="assets/js/carrousel.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>

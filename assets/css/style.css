@@ -1,0 +1,440 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto&family=Oswald:wght@400;700&display=swap');
+
+:root {
+    --black: #000000;
+    --white: #f8f8f8;
+    --red: #e30613;
+    --grey: #bfbfbf;
+}
+
+html {
+    font-size: 15px;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Oswald', sans-serif;
+}
+
+p,
+body,
+a {
+    font-family: 'Roboto', serif;
+}
+
+body {
+    background-color: var(--white)
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+.decorative-text {
+    font-family: 'Great Vibes', cursive;
+    font-size: 1.5rem;
+    color: #8B0000;
+    /* Rouge foncé pour un effet artisanal */
+}
+
+
+/*---- Header start ----*/
+
+.call-burger {
+    display: none;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    background-color: var(--black);
+    color: var(--white);
+    padding: 20px;
+    position: relative;
+    z-index: 10;
+}
+
+.logo {
+    width: 100px;
+}
+
+.nav-list {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    white-space: nowrap;
+    flex-wrap: wrap;
+    transition: all 0.3s ease;
+}
+
+.nav-item {
+    position: relative;
+    z-index: 0;
+}
+
+.nav-item a {
+    font-size: 1.2rem;
+    color: var(--white);
+    padding: 10px 30px;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.nav-item a:hover {
+    background: var(--white);
+    color: var(--black);
+}
+
+.nav-item.active>a {
+    background: var(--white);
+    color: var(--black);
+}
+
+/* Dropdown Styles */
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 100;
+    background: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    list-style: none;
+    padding: 0;
+    margin: 5px 0 0 0;
+    min-width: 150px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+}
+
+
+.dropdown-menu a {
+    color: var(--black);
+    padding: 10px 50px;
+    display: block;
+}
+
+.dropdown-menu a:hover {
+    background: var(--black);
+    color: var(--white);
+}
+
+/* Classe active pour l'affichage */
+.nav-item:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Le lien parent reste actif quand le dropdown est ouvert */
+.nav-item.active>a,
+.nav-item:hover>a {
+    background: var(--white);
+    color: var(--black);
+}
+
+/* Quand on survole le dropdown, le parent garde son style actif */
+.nav-item:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+
+.social-media {
+    display: flex;
+    gap: 20px;
+}
+
+.social-media a {
+    color: var(--red);
+    font-size: 2.2rem;
+    transition: all 0.3s ease;
+}
+
+.social-media a:hover {
+    color: var(--white);
+}
+
+@media screen and (max-width: 1000px) {
+
+    /* Menu par défaut (fermé) */
+    .nav-list {
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.873);
+        top: 110px;
+        right: 100%;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+        transition: all 0.5s ease;
+    }
+
+    /* Menu ouvert */
+    .nav-list.open {
+        right: 0;
+    }
+
+    .nav-item {
+        width: 300px;
+    }
+
+    /* Dropdown Styles */
+    .dropdown-menu {
+        position: relative;
+        /* Permet de rester dans le flux */
+        width: 100%;
+        margin: 0;
+        max-height: 0;
+        /* Masqué par défaut */
+        overflow: hidden;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(0);
+        transition: max-height 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
+    }
+
+    /* Affichage au focus */
+    .nav-item:focus-within .dropdown-menu,
+    .nav-item.open .dropdown-menu {
+        max-height: 300px;
+        /* Ajuster selon le contenu */
+        opacity: 1;
+        visibility: visible;
+    }
+
+
+
+    /* Call - burger */
+    .call-burger {
+        display: block;
+        display: flex;
+        gap: 20px;
+    }
+
+    .call-btn {
+        color: var(--black);
+        background-color: var(--red);
+        font-size: 1.3rem;
+        border-radius: 50%;
+        padding: 8px;
+        transition: all 0.3s ease;
+    }
+
+    .call-btn:hover {
+        background-color: var(--white);
+        color: var(--red);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .call-btn:focus {
+        outline: none;
+        background-color: var(--red);
+        color: var(--black);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+
+    /* burger */
+    .burger {
+        color: var(--red);
+        border: none;
+        background-color: var(--black);
+        width: 20px;
+        font-size: 2.2rem;
+    }
+
+
+    .social-media {
+        display: none;
+    }
+}
+
+/*---- Hero section ----*/
+.hero {
+    position: relative;
+    height: 100vh;
+    /* Prend toute la hauteur de la fenêtre */
+}
+
+/* Vidéo de fond */
+.hero-video {
+    width: 100%;
+    /* Prendre toute la largeur */
+    height: 100%;
+    /* Prendre toute la hauteur */
+    object-fit: cover;
+    /* Remplir sans déformation */
+    position: absolute;
+    /* Positionner en arrière-plan */
+    position: relative;
+}
+
+/* Contenu de la section (texte et bouton) */
+.hero-content {
+    width: fit-content;
+    position: absolute;
+    top: 50%;
+    /* Placer au centre verticalement */
+    left: 50%;
+    /* Placer au centre horizontalement */
+    transform: translate(-50%, -50%);
+    /* Centrer précisément */
+    text-align: center;
+    color: var(--white);
+}
+
+.main-title {
+    font-size: 4rem;
+    color: var(--white);
+    text-align: center;
+    position: relative;
+}
+
+.main-title::before {
+    content: "Ferronnerie le Letouque";
+    display: inline-block;
+    position: absolute;
+    top: -10px;
+    left: 0;
+    font-family: 'Great Vibes', cursive;
+    font-size: 1rem;
+    color: var(--red);
+    text-align: left;
+}
+
+.breakcrumb-item {
+    font-size: 0.9rem;
+    color: var(--white);
+    text-align: center;
+}
+
+/*--- Header end ----*/
+
+/*---- Main ----*/
+
+/* Section de présentation */
+.section {
+    width: 100%;
+    padding: 50px 0;
+}
+
+.title-container {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title {
+    font-size: 2rem;
+    color: var(--black);
+    margin-bottom: 20px;
+}
+
+.span-title {
+    color: var(--red);
+    font-size: 1rem;
+    font-family: 'Great Vibes', cursive;
+}
+
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 50px;
+    align-items: stretch; /* Force les éléments à prendre la hauteur complète */
+    padding: 0 50px;
+}
+
+.text-container {
+    flex: 1;
+    width: 50%;
+}
+
+.image-container {
+    flex: 1;
+    width: 50%;
+    background-image: url('https://picsum.photos/900/900?random=1');
+    background-size: cover;
+    background-position: center;
+    display: block; /* Assurer l'affichage */
+    position: relative;
+    min-height: 400px;
+}
+
+.float {
+    width: 200px;
+    height: 100px;
+    border-radius: 0 40px 0 40px;
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    background-color: var(--red);
+    color: var(--black);
+    box-shadow: 5px 5px 2px 5px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.float-title {
+    font-size: 3rem;
+    color: var(--white);
+    font-family: 'Oswald', sans-serif;
+}
+.float-text {
+    color: var(--white);
+    font-family: 'Lora', serif;
+}
+
+.text-container p {
+    margin-bottom: 20px;
+}
+@media screen and (max-width: 1000px) {
+    .wrapper {
+        flex-direction: column;
+        padding: 0 40px;
+    }
+
+    .text-container,
+    .image-container {
+        width: 100%;
+        height: 500px;
+    }
+}
+
+
+#realisation {
+    background-color: rgb(8, 1, 29);
+    color: var(--white);
+    padding: 50px 0;
+}
+
+#realisation h2 {
+    color: var(--white);
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+/*---- Gallery2  ----*/ 
+
+
+
