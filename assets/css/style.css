@@ -1,14 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto&family=Oswald:wght@400;700&display=swap');
 
+/*=============== VARIABLES CSS ===============*/
 :root {
+    /*========== Colors ==========*/
     --black: #000000;
     --white: #f8f8f8;
     --red: #e30613;
     --grey: #bfbfbf;
-}
+  
+    /*========== Font and Typography ==========*/
+  
+    --title-font: 'Oswald', sans-serif;
+    --text-font: 'Roboto', sans-serif;
+    --decoration-font: 'great vibes', cursive;
+  
+    --h1-font-size: 4rem;
+    --h2-font-size: 3rem;
+    --h3-font-size: 1.7rem;
+    --h4-font-size: 1.25rem;
+    --size-normal: 1rem;
+  }
+  
 
 html {
-    font-size: 15px;
+    font-size: clamp(14px, 1vw, 18px);
+    scroll-behavior: smooth;
 }
 
 *,
@@ -93,6 +109,7 @@ li {
 
 .nav-item a {
     font-size: 1.2rem;
+    border-radius: 5px;
     color: var(--white);
     padding: 10px 30px;
     display: block;
@@ -114,6 +131,7 @@ li {
     position: absolute;
     top: 100%;
     left: 0;
+    border-radius: 5px;
     z-index: 100;
     background: #ffffff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -163,6 +181,7 @@ li {
 
 .social-media {
     display: flex;
+    align-items: center;
     gap: 20px;
 }
 
@@ -182,11 +201,13 @@ li {
     .nav-list {
         position: absolute;
         background-color: rgba(0, 0, 0, 0.873);
-        top: 110px;
+        top: 106px;
         right: 100%;
         width: 100%;
+        padding: 30px;
         flex-direction: column;
         justify-content: center;
+        align-items: center;
         gap: 10px;
         transition: all 0.5s ease;
     }
@@ -198,6 +219,10 @@ li {
 
     .nav-item {
         width: 300px;
+    }
+
+    .nav-item a {
+        text-align: center;
     }
 
     /* Dropdown Styles */
@@ -313,12 +338,11 @@ li {
 
 .main-title::before {
     content: "Ferronnerie le Letouque";
-    display: inline-block;
-    position: absolute;
-    top: -10px;
-    left: 0;
+    display: block;
+    width: fit-content;
+    margin: 0 auto -10px auto;
     font-family: 'Great Vibes', cursive;
-    font-size: 1rem;
+    font-size: 1.5rem;
     color: var(--red);
     text-align: left;
 }
@@ -381,8 +405,9 @@ li {
     background-size: cover;
     background-position: center;
     display: block;
-    /* Assurer l'affichage */
+    border-radius: 5px;
     position: relative;
+    /* Assurer l'affichage */
     min-height: 400px;
 }
 
@@ -475,6 +500,7 @@ li {
 .gallery2-item {
     position: relative;
     overflow: hidden;
+    border-radius: 5px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -519,6 +545,7 @@ li {
     width: 80%;
     height: 80%;
     padding: 5px;
+    border-radius: 5px;
     background-color: rgba(255, 0, 0, 0.8);
     display: flex;
     align-items: center;

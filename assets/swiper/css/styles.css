@@ -1,24 +1,22 @@
-/*=============== GOOGLE FONTS ===============*/
-@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600&display=swap");
-
 /*=============== VARIABLES CSS ===============*/
 :root {
   /*========== Colors ==========*/
-  /*Color mode HSL(hue, saturation, lightness)*/
-  --first-color: hsl(38, 92%, 58%);
-  --first-color-light: hsl(38, 100%, 78%);
-  --first-color-alt: hsl(32, 75%, 50%);
-  --second-color: hsl(195, 75%, 52%);
-  --dark-color: hsl(212, 40%, 12%);
-  --white-color: hsl(212, 4%, 95%);
-  --body-color: hsl(212, 42%, 15%);
-  --container-color: hsl(212, 42%, 20%);
+  --black: #000000;
+  --white: #f8f8f8;
+  --red: #e30613;
+  --grey: #bfbfbf;
 
-  /*========== Font and typography ==========*/
-  /*.5rem = 8px | 1rem = 16px ...*/
-  --body-font: "Bai Jamjuree", sans-serif;
-  --h2-font-size: 1.25rem;
-  --normal-font-size: 1rem;
+  /*========== Font and Typography ==========*/
+
+  --title-font: 'Oswald', sans-serif;
+  --text-font: 'Roboto', sans-serif;
+  --decoration-font: 'great vibes', cursive;
+
+  --h1-font-size: 4rem;
+  --h2-font-size: 3rem;
+  --h3-font-size: 1.7rem;
+  --h4-font-size: 1.25rem;
+  --size-normal: 1rem;
 }
 
 /*=============== BASE ===============*/
@@ -30,39 +28,30 @@ img {
 }
 
 /*=============== CARD ===============*/
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  position: relative;
-}
-
 .container__card {
   padding-block: 5rem;
 }
 
 .card__content {
   margin-inline: 1.75rem;
+  border-radius: 5px;
   overflow: hidden;
 }
 
 .card__article {
   width: 300px;
-  border-radius: 0rem;
+  border-radius: 5px;
   overflow: hidden;
 }
 
 .card__image {
   position: relative;
-  background-color: var(--first-color-light);
   margin-bottom: -0.75rem;
 }
 
 .card__data {
-  background-color: var(--container-color);
+  background-color: var(--red);
   padding: 1.5rem 2rem;
-  border-radius: 0rem;
   text-align: center;
   position: relative;
   z-index: 10;
@@ -76,8 +65,8 @@ img {
 }
 
 .card__name {
-  font-size: var(--h2-font-size);
-  color: var(--second-color);
+  font-size: var(--h3-font-size);
+  color: var(--white);
   margin-bottom: .75rem;
 }
 

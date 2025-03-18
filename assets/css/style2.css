@@ -1,13 +1,22 @@
+/*=============== VARIABLES CSS ===============*/
 :root {
-  --primary-color: #233e1f;
-  --secondary-color: #9C8D6C;
-  --text-color: #333;
-  --white: #fff;
-  --nav-bg: rgba(35, 62, 31, 0.98);
+  /*========== Colors ==========*/
   --black: #000000;
   --white: #f8f8f8;
   --red: #e30613;
   --grey: #bfbfbf;
+
+  /*========== Font and Typography ==========*/
+
+  --title-font: 'Oswald', sans-serif;
+  --text-font: 'Roboto', sans-serif;
+  --decoration-font: 'great vibes', cursive;
+
+  --h1-font-size: 4rem;
+  --h2-font-size: 3rem;
+  --h3-font-size: 1.7rem;
+  --h4-font-size: 1.25rem;
+  --size-normal: 1rem;
 }
 
 
@@ -1565,7 +1574,7 @@
 
 .footer-sections {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 40px;
   margin-bottom: 40px;
 }
@@ -1596,23 +1605,28 @@
 }
 
 .footer-section ul li a:hover {
-  color: var(--primary-color);
+  color: var(--red);
 }
 
 .company-info p {
   font-size: 15px;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 
 .contact-info {
   margin-top: 20px;
 }
 
-.contact-info p {
+.contact-info a {
   display: flex;
   align-items: center;
+  color: var(--white);
   gap: 10px;
   margin-bottom: 10px;
+  transition: all 0.3s ease;
+}
+.contact-info a:hover {
+  color: var(--red);
 }
 
 .contact-info i {
@@ -1656,8 +1670,9 @@
 }
 
 .footer-bottom a {
-  color: white;
+  color:var(--white);
   text-decoration: none;
+  transition: all 0.3s ease;
 }
 
 .footer-bottom a:hover {
