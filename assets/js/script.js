@@ -1,3 +1,15 @@
+// Gestions de la position de la barre de navigation
+window.addEventListener("scroll", function () {
+    let navbar = document.querySelector(".navbar");
+
+    if (window.scrollY > 105) {
+        navbar.classList.add("fixed");
+    } else {
+        navbar.classList.remove("fixed");
+    }
+});
+
+
 // Gestion de la barre de navigation et de la mise en évidence des liens actifs
 document.addEventListener("DOMContentLoaded", function () {
     let currentUrl = window.location.pathname.split("/").pop();
@@ -55,3 +67,21 @@ document.addEventListener("DOMContentLoaded", function () {
     document.addEventListener("click", closeMenu);
 });
 
+  /* -------------------------- Scroll-top -------------------------- */
+  const scrollTopButton = document.querySelector(".scroll-top");
+  if (scrollTopButton) {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > window.innerHeight) {
+        scrollTopButton.classList.add("visible");
+      } else {
+        scrollTopButton.classList.remove("visible");
+      }
+    });
+
+    scrollTopButton.addEventListener("click", () => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    });
+  }
