@@ -7,24 +7,25 @@
     --white: #f8f8f8;
     --red: #e30613;
     --grey: #bfbfbf;
-  
+
     /*========== Font and Typography ==========*/
-  
+
     --title-font: 'Oswald', sans-serif;
     --text-font: 'Roboto', sans-serif;
     --decoration-font: 'great vibes', cursive;
-  
+
     --h1-font-size: 4rem;
     --h2-font-size: 3rem;
     --h3-font-size: 1.7rem;
     --h4-font-size: 1.25rem;
     --size-normal: 1rem;
-  }
-  
+}
+
 
 html {
     font-size: clamp(14px, 1vw, 18px);
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 *,
@@ -48,7 +49,8 @@ a {
 }
 
 body {
-    background-color: var(--white)
+    background-color: var(--white);
+    overflow-x: hidden;
 }
 
 a {
@@ -83,6 +85,7 @@ li {
     position: relative;
     z-index: 10;
 }
+
 .navbar.fixed {
     position: fixed;
     top: 0;
@@ -375,6 +378,7 @@ li {
     color: var(--black);
     margin-bottom: 20px;
 }
+
 .section-title.white {
     color: var(--white);
 }
@@ -422,7 +426,6 @@ li {
     left: -20px;
     background-color: var(--red);
     color: var(--black);
-    box-shadow: 5px 5px 2px 5px rgba(0, 0, 0, 0.5);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -478,23 +481,36 @@ li {
     color: var(--white);
     padding: 50px 0;
 }
-/* Structure responsive avec CSS Grid */
-.gallery2-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 15px;
-    width: 100%;
+
+.section-gallery {
+    text-align: center;
 }
 
+.gallery2-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+    overflow: hidden;
+}
+
+.gallery2-item {
+    width: 25vw;
+    height: auto;
+    overflow: hidden;
+    padding: 0 10px;
+}
+
+
 @media (max-width: 900px) {
-    .gallery2-container {
-        grid-template-columns: repeat(2, 1fr);
+    .gallery2-item {
+        width: 50vw;
     }
 }
 
 @media (max-width: 600px) {
-    .gallery2-container {
-        grid-template-columns: 1fr;
+    .gallery2-item {
+        width: 80vw;
     }
 }
 

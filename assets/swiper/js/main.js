@@ -5,13 +5,6 @@ let swiper = new Swiper('.card__content', {
     spaceBetween: 32, // Définit l'espace entre les slides
     grabCursor: true, // Change le curseur en "main" pour un effet interactif
 
-    // // Configuration de la pagination
-    // pagination: {
-    //     el: '.swiper-pagination', // Sélectionne l'élément de pagination
-    //     clickable: true, // Permet de cliquer sur les bullets pour changer de slide
-    //     dynamicBullets: true, // Affiche des bullets dynamiques (taille variable)
-    // },
-
         // Configuration de l'autoplay
         autoplay: {
             delay: 1000, // Temps entre chaque slide (3000ms = 3s)
@@ -73,25 +66,22 @@ swiper.init();
 // Initialisation du deuxième Swiper
 let swiper2 = new Swiper('.section-gallery', {
     loop: true,
-    spaceBetween: 32,
+    spaceBetween: 0,
     grabCursor: true,
     autoplay: {
-        delay: 1000,
+        delay: 500,
         disableOnInteraction: false,
         pauseOnMouseEnter: true,
     },
-    speed: 2000,
+    speed: 1500,
     effect: 'slide',
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
+
     breakpoints: {
         600: {
             slidesPerView: 2,
         },
         968: {
-            slidesPerView: 3,
+            slidesPerView: 4,
         },
     },
 });
