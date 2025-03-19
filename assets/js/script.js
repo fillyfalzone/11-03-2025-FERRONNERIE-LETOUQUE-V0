@@ -9,6 +9,14 @@ window.addEventListener("scroll", function () {
     }
 });
 
+// Animation de la vidéo d'accueil
+window.addEventListener("load", function() {
+    const video = document.querySelector(".hero-video");
+    setTimeout(() => {
+        video.classList.add("active");
+    }, 1000); // Retard de 2,5 secondes (pour l'animation du titre)
+});
+
 
 // Gestion de la barre de navigation et de la mise en évidence des liens actifs
 document.addEventListener("DOMContentLoaded", function () {

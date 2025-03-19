@@ -1,18 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto&family=Oswald:wght@400;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Parisienne&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 /*=============== VARIABLES CSS ===============*/
 :root {
     /*========== Colors ==========*/
     --black: #000000;
     --white: #f8f8f8;
     --red: #e30613;
+    --dark-red: #8B0000;
     --grey: #bfbfbf;
 
     /*========== Font and Typography ==========*/
 
     --title-font: 'Oswald', sans-serif;
     --text-font: 'Roboto', sans-serif;
-    --decoration-font: 'great vibes', cursive;
+    --decoration-font: 'Parisienne', cursive;
 
     --h1-font-size: 4rem;
     --h2-font-size: 3rem;
@@ -62,10 +62,9 @@ li {
 }
 
 .decorative-text {
-    font-family: 'Great Vibes', cursive;
+    font-family: var(--decoration-font);
     font-size: 1.5rem;
-    color: #8B0000;
-    /* Rouge foncé pour un effet artisanal */
+    color: var(--red);
 }
 
 /*---- Header start ----*/
@@ -131,6 +130,17 @@ li {
     color: var(--black);
 }
 
+.nav-item:last-child {
+    display: none;
+}
+
+.nav-item:last-child a {
+    background: var(--black);
+    color: var(--red);
+}
+
+
+
 /* Dropdown Styles */
 .dropdown-menu {
     position: absolute;
@@ -190,12 +200,13 @@ li {
     gap: 20px;
 }
 
+.social-media2 a,
 .social-media a {
     color: var(--red);
     font-size: 2.2rem;
     transition: all 0.3s ease;
 }
-
+.social-media2 a:hover,
 .social-media a:hover {
     color: var(--white);
 }
@@ -228,6 +239,23 @@ li {
 
     .nav-item a {
         text-align: center;
+    }
+
+    .nav-item:last-child {
+        display: block;
+    }
+
+    .social-media2 {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .social-media2 img {
+        width: 70px;
+    }
+    .social-media2 a {
+        padding: 10px;
     }
 
     /* Dropdown Styles */
@@ -307,7 +335,8 @@ li {
     /* Prend toute la hauteur de la fenêtre */
 }
 
-/* Vidéo de fond */
+/* Vidéo de fond et imgage héro */
+.hero-image,
 .hero-video {
     width: 100%;
     /* Prendre toute la largeur */
@@ -318,9 +347,27 @@ li {
     position: absolute;
     /* Positionner en arrière-plan */
     position: relative;
+    opacity: 0; 
+    transition: opacity 1s ease-in-out;
+}
+.hero-image.active,
+.hero-video.active {
+    opacity: 1;
 }
 
-/* Contenu de la section (texte et bouton) */
+/* Box-shadow en bas de la section héro */
+.hero::after {
+    content: ""; /* Nécessaire pour créer un élément pseudo */
+    position: absolute;
+    bottom: 0; /* Place-le en bas de la section héro */
+    left: 0;
+    width: 100%;
+    height: 20px; /* Taille de l'ombre */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8); /* Ombre douce */
+    pointer-events: none; /* Empêche l'ombre d'interférer avec les clics ou les interactions */
+}
+
+/* Contenu de la section*/
 .hero-content {
     width: fit-content;
     position: absolute;
@@ -338,24 +385,53 @@ li {
     font-size: 4rem;
     color: var(--white);
     text-align: center;
-    position: relative;
+    animation: textEffect 2.5s 1;
 }
-
-.main-title::before {
-    content: "Ferronnerie le Letouque";
-    display: block;
-    width: fit-content;
-    margin: 0 auto -10px auto;
-    font-family: 'Great Vibes', cursive;
-    font-size: 1.5rem;
+.hero-content .span-title {
     color: var(--red);
-    text-align: left;
+    font-size: 2rem;
+    font-weight: 600;
+    font-family: var(--decoration-font);
+    position: relative;
+    animation: slideUp 2.5s 1 forwards;
 }
-
 .breakcrumb-item {
-    font-size: 0.9rem;
+    font-size: 1rem;
     color: var(--white);
     text-align: center;
+    transition: all 0.3s ease;
+}
+.breakcrumb-item:hover {
+    color: var(--red);
+}
+
+/* 
+    * Animation du texte
+*/
+@keyframes textEffect {
+    0% {
+        color: black;
+        letter-spacing: 25px;
+    }
+    30% {
+        color: white;
+        letter-spacing: 8px;
+    }
+    100% {
+        color: white;
+        letter-spacing: 8px;
+    }
+}
+
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /*--- Header end ----*/
@@ -385,8 +461,9 @@ li {
 
 .span-title {
     color: var(--red);
-    font-size: 1rem;
-    font-family: 'Great Vibes', cursive;
+    font-size: 1.5rem;
+    font-weight: 600;
+    font-family: var(--decoration-font);
 }
 
 .wrapper {
@@ -417,30 +494,33 @@ li {
     min-height: 400px;
 }
 
-.float {
+
+.float-container {
     width: 200px;
-    height: 100px;
-    border-radius: 0 40px 0 40px;
     position: absolute;
     top: -20px;
     left: -20px;
     background-color: var(--red);
-    color: var(--black);
+    border-radius: 0 40px 0 40px;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 10px 10px 25px 10px;
+}
+
+.float {
+    width: fit-content;
 }
 
 .float-title {
-    font-size: 3rem;
+    font-size: 2.5rem;
     color: var(--white);
-    font-family: 'Oswald', sans-serif;
+    font-family: var(--title-font);
 }
 
 .float-text {
     color: var(--white);
-    font-family: 'Lora', serif;
+    font-family: var(--text-font);
 }
 
 .text-container p {
@@ -541,13 +621,19 @@ li {
     transition: opacity 0.3s ease-in-out;
 }
 
+.gallery2-text h3 a{
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    color: inherit;
+}
+
 .gallery2-item:hover .gallery2-text {
     opacity: 0;
 }
 
 
 
-.galllery2-overlay h3 {
+.galllery2-overlay h3 a {
     color: var(--white);
     font-size: 1.2rem;
 }

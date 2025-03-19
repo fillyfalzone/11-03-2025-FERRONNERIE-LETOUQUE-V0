@@ -58,9 +58,10 @@
 .scroll-top {
   display: none;
   position: fixed;
+  z-index: 1000;
   bottom: 20px;
   left: 20px;
-  background-color: var(--text-color);
+  background-color: var(--red);
   color: var(--white);
   padding: 10px 12px;
   border-radius: 50%;
@@ -70,7 +71,8 @@
 }
 
 .scroll-top:hover {
-  background-color: var(--primary-color);
+  background-color: var(--black);
+  color: var(--white);
   scale: 1.1;
 }
 
@@ -89,7 +91,7 @@
   position: fixed;
   bottom: 20px;
   right: 20px;
-  box-shadow: 1 1 5px var(--red);
+  box-shadow: 0 1px 5px var(--black);
   z-index: 1000;
   animation: pulse 2s infinite;
 }
@@ -113,18 +115,18 @@
 @keyframes pulse {
   0% {
     /* transform: scale(1); */
-    box-shadow: 0 0 0px var(--primary-color);
+    box-shadow: 0 0 0px var(--black);
   }
 
   50% {
     /* transform: scale(1.1); */
-    box-shadow: 0 0 10px var(--primary-color);
+    box-shadow: 0 0 10px var(--black);
     ;
   }
 
   100% {
     /* transform: scale(1); */
-    box-shadow: 0 0 0px var(--primary-color);
+    box-shadow: 0 0 0px var(--black);
   }
 }
 
@@ -161,14 +163,12 @@
     pointer-events: auto;
   }
 
-
   .nav-links a {
     color: var(--primary-color);
     padding: 15px;
     width: 100%;
     display: block;
   }
-
 
   /* Dropdown en mobile */
   .dropdown-menu {
