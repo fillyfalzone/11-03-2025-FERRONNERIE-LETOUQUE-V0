@@ -19,14 +19,21 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css" crossorigin="">
     <!-- CDN Google Font -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
-    <!--=============== CSS ===============-->
-    <link rel="stylesheet" href="assets/swiper/css/styles.css">
-    <link rel="stylesheet" href="assets/css/carrousel.css">
-    <link rel="stylesheet" href="assets/css/style2.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+
+
+    <!--=============== Flickyti CSS ===============-->
+    <link rel="stylesheet" href="assets/flickyti/flickity.css">
+    <link rel="stylesheet" href="assets/flickyti/flickity.min.css">
+     <!-- Flickity -->
+  <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
 
     <!--=============== CDN Animation on scrool AOS ===============-->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="assets/aos/aos.css" rel="stylesheet">
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/swiper/css/styles.css">
+    <link rel="stylesheet" href="assets/css/style2.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
@@ -78,7 +85,7 @@
             </div>
             <div id="call-burger" class="call-burger">
                 <!-- Call button -->
-                <a href="tel:+336 63 63 63 63" class="call-btn fas fa-phone"></a>
+                <a href="tel:+33481685515" class="call-btn fas fa-phone"></a>
                 <!-- Burger -->
                 <button id="burger" class="burger fas fa-bars"></button>
             </div>
@@ -86,18 +93,68 @@
         <!-- Navbar end -->
 
         <!-- Hero start -->
-        <section id="hero" class="hero">
-            <!-- Video immersive -->
-            <video class="hero-video" autoplay loop muted playsinline>
-                <source src="assets/video/videoplayback.webm" type="video/mp4">
-                Votre navigateur ne prend pas en charge la balise vidéo.
-            </video>
-            <!-- Main title -->
-            <div class="hero-content">
-                <span class="span-title">Ferronnerie Letouque</span>
-                <h1 class="main-title">Ferronnerie LETOUQUE</h1>
+        <div class="hero-slider" data-carousel>
+            <div class="carousel-cell"
+                style="background-image:url(https://78.media.tumblr.com/469798be38e86cc01ea4ba08563af785/tumblr_p38kazKBIX1snegd3o1_1280.jpg);">
+                <div class="overlay"></div>
+                <div class="slide-content">
+                    <div class="mask">
+                        <span class="span-title-hero mask">Ferronnerie Letouque</span>
+                        <p class="title">L'Art du Métal</p>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="mask">
+                        <p class="caption">Quand le métal devient chef-d'œuvre</p>
+                        <a href="https://flickity.metafizzy.co/" target="_blank" class="btn">Voir plus </a>
+                    </div>
+                </div>
             </div>
-        </section>
+            <div class="carousel-cell"
+                style="background-image:url(https://78.media.tumblr.com/f3577e640674f66119dad5ce61b4582c/tumblr_ozf8vw9LYN1snegd3o1_1280.jpg);">
+                <div class="overlay"></div>
+                <div class="slide-content">
+                    <div class="mask">
+                        <span class="span-title-hero mask">Ferronnerie Letouque</span>
+                        <p class="title">Robustesse & Élégance</p>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="mask">
+                        <p class="caption">L’alliance parfaite entre force et finesse</p>
+                        <a href="https://flickity.metafizzy.co/" target="_blank" class="btn">Voir plus </a>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-cell"
+                style="background-image:url(https://78.media.tumblr.com/895918f98ebb3644e885f663bf63ba61/tumblr_pa4fmzV4kV1snegd3o1_1280.jpg);">
+                <div class="overlay"></div>
+                <div class="slide-content">
+                    <div class="mask">
+                        <span class="span-title-hero mask">Ferronnerie Letouque</span>
+                        <p class="title">Sur-mesure, Comme Vous</p>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="mask">
+                        <p class="caption">Vos idées, notre savoir-faire</p>
+                        <a href="https://flickity.metafizzy.co/" target="_blank" class="btn">Voir plus </a>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-cell"
+                style="background-image:url(https://78.media.tumblr.com/895918f98ebb3644e885f663bf63ba61/tumblr_pa4fmzV4kV1snegd3o1_1280.jpg);">
+                <div class="overlay"></div>
+                <div class="slide-content">
+                    <div class="mask">
+                        <span class="span-title-hero mask">Ferronnerie Letouque</span>
+                        <p class="title">Un Héritage Qui Traverse le Temps</p>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="mask">
+                        <p class="caption">La ferronnerie, un art qui ne rouille pas</p>
+                        <a href="https://flickity.metafizzy.co/" target="_blank" class="btn">Voir plus </a>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!-- Hero end -->
     </header>
     <!-- Header end -->
@@ -374,7 +431,7 @@
                 <div class="footer-section">
                     <h4>Contacts</h4>
                     <div class="contact-info">
-                        <a href="tel:+33673472444"><i class="fas fa-phone"></i> 06 73 47 24 44</a>
+                        <a href="tel:+33481685515"><i class="fas fa-phone"></i> 04 81 68 55 15</a>
                         <a href="mailto:contact@ferronnerieletouque.fr"><i class="fas fa-envelope"></i>
                             contact@ferronnerieletouque.fr</a>
                         <a href="https://www.google.com/maps?q=20+bd+marechal+joffre+-+06310+BEAULIEU+SUR+MER"
@@ -408,12 +465,19 @@
     <script src="assets/swiper/js/main.js"></script>
 
     <!--=============== CDN Animation on scrool AOS ===============-->
-    <script src="https://unpkg.com/aos@2.3.1"></script>
-    <script>
-        AOS.init();
-    </script>
+    <script src="assets/aos/aos@2.3.1.js"></script>
+    <script src="assets/aos/aos.ini.js"></script>
+
+     <!--=============== CDN jQuery ===============-->
+    <!-- jQuery (nécessaire pour sélectionner avec $) -->
+  <script src="assets/jquery/jquery-3.6.0.min.js"></script>
+  
+    <!--=============== Flickyti js pour héro slider ===============-->
+    <script src="assets/flickyti/flickity.pkgd.min.js"></script>
+  <script src="assets/flickyti/flickity.ini.js"></script>
 
     <!--=============== JS ===============-->
     <script src="assets/js/script.js"></script>
 </body>
+
 </html>

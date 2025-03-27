@@ -6,31 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ferronnerie LETOUQUE</title>
     <meta name="description" content="Ferronnerie LETOUQUE, ferronnerie d'art, garde-corps, portails et clôtures">
-    <link rel="canonical" href="https://www.ferronnerieletouque.fr/services.html">
+    <link rel="canonical" href="https://www.ferronnerieletouque.fr">
     <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
 
     <!--=============== SWIPER CSS ===============-->
     <link rel="stylesheet" href="assets/swiper/css/swiper-bundle.min.css">
-
     <!-- CDN fontawesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-
     <!--=============== REMIXICONS ===============-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css" crossorigin="">
-   
     <!-- CDN Google Font -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
 
-    <!--=============== CSS ===============-->
-    <link rel="stylesheet" href="assets/swiper/css/styles.css">
-    <link rel="stylesheet" href="assets/css/carrousel.css">
-    <link rel="stylesheet" href="assets/css/style2.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!--=============== Flickyti CSS ===============-->
+    <link rel="stylesheet" href="assets/flickyti/flickity.css">
+    <link rel="stylesheet" href="assets/flickyti/flickity.min.css">
+    <!-- Flickity -->
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
 
     <!--=============== CDN Animation on scrool AOS ===============-->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="assets/aos/aos.css" rel="stylesheet">
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/swiper/css/styles.css">
+    <link rel="stylesheet" href="assets/css/style2.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
@@ -42,7 +45,6 @@
                 <img class="logo" src="assets/images/logo/ferronnerie-letouque-maitre-artisan.svg"
                     alt="Logo de la ferronnerie LETOUQUE">
             </a>
-
             <ul class="nav-list" id="nav-list">
                 <li class="nav-item"><a href="index.html">Accueil</a></li>
                 <li class="nav-item"><a href="realisations.html">Nos réalisations</a></li>
@@ -83,7 +85,7 @@
             </div>
             <div id="call-burger" class="call-burger">
                 <!-- Call button -->
-                <a href="tel:+336 63 63 63 63" class="call-btn fas fa-phone"></a>
+                <a href="tel:+33481685515" class="call-btn fas fa-phone"></a>
                 <!-- Burger -->
                 <button id="burger" class="burger fas fa-bars"></button>
             </div>
@@ -91,23 +93,23 @@
         <!-- Navbar end -->
 
         <!-- Hero start -->
-        <section id="hero" class="hero">
-            <!-- Image immersive -->
-            <img class="hero-image" src="https://picsum.photos/1920/1080" alt="Image immersive">
-            <!-- Main title -->
-            <div class="hero-content">
-                <h1 class="main-title" style="color:var(--white);">Les services de la Ferronnerie LETOUQUE</h1>
-                <!-- Titre masqué pour l'accessibilité -->
-                <!-- Breakcrumb -->
-                <div class="breadcrumb"></div>
-                <a class="breakcrumb-item" href="index.html">Accueil</a>
-                <span>></span>
-                <a class="breakcrumb-item" href="realisations.html">Nos réalisations</a>
-                <span>></span>
-                <span>xxxxxxxxx</span>
+        <div class="hero-slider" data-carousel>
+            <div class="carousel-cell"
+                style="background-image:url(https://78.media.tumblr.com/469798be38e86cc01ea4ba08563af785/tumblr_p38kazKBIX1snegd3o1_1280.jpg);">
+                <div class="overlay"></div>
+                <div class="slide-content">
+                    <div class="mask">
+                        <span class="span-title">Ferronnerie Letouque</span>
+                        <p class="title">L'Art du Métal</p>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="mask">
+                        <p class="caption">Quand le métal devient chef-d'œuvre</p>
+                        <a href="https://flickity.metafizzy.co/" target="_blank" class="btn">Voir plus </a>
+                    </div>
+                </div>
             </div>
-            </div>
-        </section>
+        </div>
         <!-- Hero end -->
     </header>
     <!-- Header end -->
@@ -308,11 +310,17 @@
     <script src="assets/swiper/js/main.js"></script>
 
     <!--=============== CDN Animation on scrool AOS ===============-->
-    <script src="https://unpkg.com/aos@2.3.1"></script>
-    <script>
-        AOS.init();
-    </script>
+    <script src="assets/aos/aos@2.3.1.js"></script>
+    <script src="assets/aos/aos.ini.js"></script>
 
+    <!--=============== CDN jQuery ===============-->
+    <!-- jQuery (nécessaire pour sélectionner avec $) -->
+    <script src="assets/jquery/jquery-3.6.0.min.js"></script>
+
+    <!--=============== Flickyti js pour héro slider ===============-->
+    <script src="assets/flickyti/flickity.pkgd.min.js"></script>
+    <script src="assets/flickyti/flickity.ini.hero-image.js"></script>
+   
     <!--=============== JS ===============-->
     <script src="assets/js/script.js"></script>
 </body>

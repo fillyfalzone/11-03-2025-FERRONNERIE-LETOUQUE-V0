@@ -9,7 +9,6 @@
     --grey: #bfbfbf;
 
     /*========== Font and Typography ==========*/
-
     --title-font: 'Oswald', sans-serif;
     --text-font: 'Roboto', sans-serif;
     --decoration-font: 'Parisienne', cursive;
@@ -23,7 +22,7 @@
 
 
 html {
-    font-size: clamp(14px, 1vw, 18px);
+    font-size: clamp(14px, 1.2vw, 18px);
     scroll-behavior: smooth;
     overflow-x: hidden;
 }
@@ -328,114 +327,6 @@ li {
     }
 }
 
-/*---- Hero section ----*/
-.hero {
-    position: relative;
-    height: 100vh;
-    /* Prend toute la hauteur de la fenêtre */
-}
-
-/* Vidéo de fond et imgage héro */
-.hero-image,
-.hero-video {
-    width: 100%;
-    /* Prendre toute la largeur */
-    height: 100%;
-    /* Prendre toute la hauteur */
-    object-fit: cover;
-    /* Remplir sans déformation */
-    position: absolute;
-    /* Positionner en arrière-plan */
-    position: relative;
-    opacity: 0; 
-    transition: opacity 1s ease-in-out;
-}
-.hero-image.active,
-.hero-video.active {
-    opacity: 1;
-}
-
-/* Box-shadow en bas de la section héro */
-.hero::after {
-    content: ""; /* Nécessaire pour créer un élément pseudo */
-    position: absolute;
-    bottom: 0; /* Place-le en bas de la section héro */
-    left: 0;
-    width: 100%;
-    height: 20px; /* Taille de l'ombre */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8); /* Ombre douce */
-    pointer-events: none; /* Empêche l'ombre d'interférer avec les clics ou les interactions */
-}
-
-/* Contenu de la section*/
-.hero-content {
-    width: fit-content;
-    position: absolute;
-    top: 50%;
-    /* Placer au centre verticalement */
-    left: 50%;
-    /* Placer au centre horizontalement */
-    transform: translate(-50%, -50%);
-    /* Centrer précisément */
-    text-align: center;
-    color: var(--white);
-}
-
-.main-title {
-    font-size: 4rem;
-    color: var(--white);
-    text-align: center;
-    animation: textEffect 2.5s 1;
-}
-.hero-content .span-title {
-    color: var(--red);
-    font-size: 2rem;
-    font-weight: 600;
-    font-family: var(--decoration-font);
-    position: relative;
-    animation: slideUp 2.5s 1 forwards;
-}
-.breakcrumb-item {
-    font-size: 1rem;
-    color: var(--white);
-    text-align: center;
-    transition: all 0.3s ease;
-}
-.breakcrumb-item:hover {
-    color: var(--red);
-}
-
-/* 
-    * Animation du texte
-*/
-@keyframes textEffect {
-    0% {
-        color: black;
-        letter-spacing: 25px;
-    }
-    30% {
-        color: white;
-        letter-spacing: 8px;
-    }
-    100% {
-        color: white;
-        letter-spacing: 8px;
-    }
-}
-
-@keyframes slideUp {
-    0% {
-        opacity: 0;
-        transform: translateY(-50px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/*--- Header end ----*/
-
 /*---- Main ----*/
 
 /* Section de présentation */
@@ -459,7 +350,9 @@ li {
     color: var(--white);
 }
 
-.span-title {
+.span-title,
+.span-title-hero
+ {
     color: var(--red);
     font-size: 1.5rem;
     font-weight: 600;

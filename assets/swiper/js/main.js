@@ -1,5 +1,6 @@
 /*=============== SWIPER JS ===============*/
-// Initialisation de Swiper
+
+// Initialisation de Swiper pour les cartes
 let swiper = new Swiper('.card__content', {
     loop: true, // Permet au carrousel de défiler en boucle
     spaceBetween: 32, // Définit l'espace entre les slides
@@ -100,3 +101,4 @@ swiper2.init();
 
 // Force l'initialisation du Swiper après l'ajout de la classe
 swiper2.init();
+

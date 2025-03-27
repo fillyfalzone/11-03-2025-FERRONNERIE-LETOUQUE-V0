@@ -90,7 +90,7 @@ img {
   width: initial;
   height: initial;
   font-size: 3rem;
-  color: var(--second-color);
+  color: var(--white);
   display: none;
 }
 

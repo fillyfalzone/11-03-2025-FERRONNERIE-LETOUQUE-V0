@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Parisienne&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+/*=============== VARIABLES CSS ===============*/
+:root {
+    /*========== Colors ==========*/
+    --black: #000000;
+    --white: #f8f8f8;
+    --red: #e30613;
+    --dark-red: #8B0000;
+    --grey: #bfbfbf;
+
+    /*========== Font and Typography ==========*/
+    --title-font: 'Oswald', sans-serif;
+    --text-font: 'Roboto', sans-serif;
+    --decoration-font: 'Parisienne', cursive;
+
+    --h1-font-size: 4rem;
+    --h2-font-size: 3rem;
+    --h3-font-size: 1.7rem;
+    --h4-font-size: 1.25rem;
+    --size-normal: 1rem;
+}
+
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to bottom, rgba(14, 29, 51, 0.8), rgba(14, 29, 51, 0.2));
+}
+
+.hero-slider {
+    width: 100%;
+    height: 90vh;
+    overflow: hidden;
+}
+
+.hero-slider .carousel-cell {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-slider .carousel-cell .slide-content {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+}
+
+.hero-slider .carousel-cell .slide-content .title {
+    position: relative;
+    font-family: var(--title-font);
+    font-size: var(--h1-font-size);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+.hero-slider .carousel-cell .slide-content .caption {
+    font-family: "Noto Sans", sans-serif;
+    font-size: var(--h3-font-size);
+    color: #ffffff;
+    margin-bottom: 30px;
+}
+
+.hero-slider .carousel-cell .slide-content .btn {
+    display: inline-block;
+    border: 1px solid var(--white);
+    padding: 14px 18px;
+    text-transform: uppercase;
+    font-family: var(--text-font);
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.hero-slider .carousel-cell .slide-content .btn:hover {
+    background: var(--red);
+    color: var(--white);
+    transition: all 0.2s ease;
+}
+
+.hero-slider .flickity-prev-next-button {
+    width: 80px;
+    height: 80px;
+    background: transparent;
+}
+
+.hero-slider .flickity-prev-next-button:hover {
+    background: transparent;
+}
+
+.hero-slider .flickity-prev-next-button .arrow {
+    fill: white;
+}
+
+.hero-slider .flickity-page-dots {
+    bottom: 30px;
+}
+
+.hero-slider .flickity-page-dots .dot {
+    width: 30px;
+    height: 4px;
+    opacity: 1;
+    background: rgba(255, 255, 255, 0.5);
+    border: 0 solid white;
+    border-radius: 0;
+}
+
+.hero-slider .flickity-page-dots .dot.is-selected {
+    background: #ff0000;
+    border: 0 solid #ff0000;
+}
+
+/* --------------------------------
+  Masking
+  -------------------------------- */
+.slide-content .title,
+.slide-content .span-title-hero,
+.slide-content .caption,
+.slide-content .btn {
+    position: relative;
+    opacity: 0;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+.slide-content.mask .mask {
+    position: relative;
+    overflow: hidden;
+}
+
+.span-title-hero {
+    position: relative;
+    opacity: 0; /* Caché au départ */
+    animation-fill-mode: forwards; /* Reste en place après l'animation */
+}
+
+
+.slide-content.mask .title, 
+.slide-content.mask .span-title-hero {
+    -webkit-animation-duration: 0.4s;
+    animation-duration: 0.4s;
+    -webkit-animation-delay: 0.7s;
+    animation-delay: 0.7s;
+    -webkit-animation-name: slide-up;
+    animation-name: slide-up;
+    -webkit-animation-fill-mode: backwards;
+    animation-fill-mode: backwards;
+    opacity: 1;
+}
+
+.slide-content.mask .divider {
+    display: inline-block;
+    position: relative;
+    margin: 5px auto;
+    height: 2px;
+    width: 60%;
+    background-color: #ffffff;
+    -webkit-animation: divider-mask 1s 0.3s both;
+    animation: divider-mask 1s 0.3s both;
+}
+
+.slide-content.mask .caption,
+.slide-content.mask .btn {
+    -webkit-animation-duration: 0.4s;
+    animation-duration: 0.4s;
+    -webkit-animation-delay: 0.7s;
+    animation-delay: 0.7s;
+    -webkit-animation-name: slide-down;
+    animation-name: slide-down;
+}
+
+@-webkit-keyframes slide-up {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(100%);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+    }
+}
+
+@keyframes slide-up {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@-webkit-keyframes slide-down {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(-100%);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+    }
+}
+
+@keyframes slide-down {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@-webkit-keyframes divider-mask {
+
+    0%,
+    100% {
+        transform: scaleX(0);
+    }
+
+    40%,
+    60% {
+        -webkit-transform: scaleX(1);
+    }
+}
+
+@keyframes divider-mask {
+
+    0%,
+    100% {
+        transform: scaleX(0);
+    }
+
+    40%,
+    60% {
+        transform: scaleX(1);
+    }
+}
