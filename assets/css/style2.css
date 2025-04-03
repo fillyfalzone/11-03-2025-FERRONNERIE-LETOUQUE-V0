@@ -175,7 +175,8 @@
     position: static;
     width: 100%;
     background: rgba(255, 255, 255, 0.9);
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
     max-height: 0;
     transition: max-height 0.3s ease-in-out;
     box-shadow: none;
@@ -184,16 +185,16 @@
 
 
   .dropdown-menu li {
-    padding-left: 20px;
+  
   }
 
   .dropdown-menu li a {
-    text-align: left;
+    text-align: center;
   }
 
   .dropdown:hover .dropdown-menu,
   .dropdown.active .dropdown-menu {
-    max-height: 400px;
+    max-height: 450px;
     /* Valeur à ajuster en fonction de la hauteur réelle du contenu */
   }
 
