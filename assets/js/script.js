@@ -66,21 +66,50 @@ document.addEventListener("DOMContentLoaded", function () {
     document.addEventListener("click", closeMenu);
 });
 
-  /* -------------------------- Scroll-top -------------------------- */
-  const scrollTopButton = document.querySelector(".scroll-top");
-  if (scrollTopButton) {
+/* -------------------------- Gesttion de l'ouverture du dropdown sur mobile apple -------------------------- */
+document.addEventListener("DOMContentLoaded", function () {
+    let dropdowns = document.querySelectorAll(".nav-item.dropdown");
+
+    dropdowns.forEach((dropdown) => {
+        let toggle = dropdown.querySelector(".dropdown-toggle");
+
+        toggle.addEventListener("click", function (event) {
+            event.preventDefault(); // Empêche le lien de suivre l'URL
+            event.stopPropagation(); // Évite la fermeture immédiate
+            dropdown.classList.toggle("open");
+        });
+
+        toggle.addEventListener("touchstart", function (event) {
+            event.preventDefault();
+            event.stopPropagation();
+            dropdown.classList.toggle("open");
+        });
+    });
+
+    // Fermer le menu si on clique en dehors
+    document.addEventListener("click", function (event) {
+        dropdowns.forEach((dropdown) => {
+            if (!dropdown.contains(event.target)) {
+                dropdown.classList.remove("open");
+            }
+        });
+    });
+});
+/* -------------------------- Scroll-top -------------------------- */
+const scrollTopButton = document.querySelector(".scroll-top");
+if (scrollTopButton) {
     window.addEventListener("scroll", () => {
-      if (window.scrollY > window.innerHeight) {
-        scrollTopButton.classList.add("visible");
-      } else {
-        scrollTopButton.classList.remove("visible");
-      }
+        if (window.scrollY > window.innerHeight) {
+            scrollTopButton.classList.add("visible");
+        } else {
+            scrollTopButton.classList.remove("visible");
+        }
     });
 
     scrollTopButton.addEventListener("click", () => {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-      });
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
     });
-  }
+}
