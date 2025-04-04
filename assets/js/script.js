@@ -66,6 +66,7 @@ document.addEventListener("DOMContentLoaded", function () {
     burger.addEventListener("click", toggleMenu);
     document.addEventListener("click", closeMenu);
 
+<<<<<<< HEAD
     /*   ----- Fonction pour déplacer le lien selon la largeur de l'écran ---*/
     // // Fonction pour déplacer le lien selon la largeur de l'écran
     // function moveLink() {
@@ -92,6 +93,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     /* -------------------------- Gesttion de l'ouverture du dropdown sur mobile apple -------------------------- */
+=======
+/* -------------------------- Gesttion de l'ouverture du dropdown sur mobile apple -------------------------- */
+document.addEventListener("DOMContentLoaded", function () {
+>>>>>>> 4b492d7cd74282186b8c50095e3e89d154d6fcf6
     let dropdowns = document.querySelectorAll(".nav-item.dropdown");
 
     dropdowns.forEach((dropdown) => {
@@ -108,6 +113,7 @@ document.addEventListener("DOMContentLoaded", function () {
             event.stopPropagation();
             dropdown.classList.toggle("open");
         });
+<<<<<<< HEAD
     });
 
     // Fermer le menu si on clique en dehors
@@ -138,3 +144,34 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 });
+=======
+    });
+
+    // Fermer le menu si on clique en dehors
+    document.addEventListener("click", function (event) {
+        dropdowns.forEach((dropdown) => {
+            if (!dropdown.contains(event.target)) {
+                dropdown.classList.remove("open");
+            }
+        });
+    });
+});
+/* -------------------------- Scroll-top -------------------------- */
+const scrollTopButton = document.querySelector(".scroll-top");
+if (scrollTopButton) {
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > window.innerHeight) {
+            scrollTopButton.classList.add("visible");
+        } else {
+            scrollTopButton.classList.remove("visible");
+        }
+    });
+
+    scrollTopButton.addEventListener("click", () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+}
+>>>>>>> 4b492d7cd74282186b8c50095e3e89d154d6fcf6
